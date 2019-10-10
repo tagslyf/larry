@@ -1,0 +1,1 @@
+PyQt5==5.10.1  # I choose this version because latest version have issue in the OS that I use in my machine
