@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h2>Uploaded Images</h2>
+    {% for image in images %}
+        {% if image.image %}
+            <img src="{{ image.image.url }}" style="border: solid">
+        {% endif %}
+    {% endfor %}
+{% endblock %}
