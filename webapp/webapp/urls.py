@@ -21,8 +21,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.UploadImageListView.as_view(), name='index'),
-
+    path('', views.Index.as_view(), name='index'),
+    path('upload/', views.upload, name='upload'),
+    path('images/', views.image_list, name='image_list'),
+    path('images/upload/', views.upload_image, name='upload_image'),
+    path('class/images/', views.UploadImageListView.as_view(), name='class_image_list'),
+    path('class/images/upload/', views.UploadImageView.as_view(), name='class_image_upload'),
     path('admin/', admin.site.urls),
 ]
 

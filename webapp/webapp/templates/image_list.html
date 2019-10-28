@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% block content_header %}
+        <h2>Image(s)</h2>
+    {% endblock%}
+    
+    <table class="table mb-0">
+        <tbody>
+            {% for image in images %}
+                <tr>
+                    <td><img src="{{ image.image.url }}" style="width: 200px"></img></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
